@@ -1,0 +1,75 @@
+.propertyBookingHeading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 40px 40px 10px;
+}
+
+.bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.bookingFormLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.bookingFormInput {
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid black;;
+    border-radius: 8px;
+    padding: 8px;
+    font-family: Montserrat, serif;
+    font-size: 0.9rem;
+}
+
+.bookingBtn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: none;
+    background-color: #7b9bd6;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+    font-family: Montserrat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bookingBtn:hover {
+    border: 1px solid #497ad6;
+    background-color: white;
+    color: #497ad6;
+}
+
+@media only screen and (min-width: 481px) {
+    .bookingFormContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .bookingForm {
+        align-items: center;
+        gap: 30px;
+    }
+    .bookingFormInput {
+        width: 375px;
+        height: 3rem;
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .bookingBtn {
+        width: 200px;
+    }
+}

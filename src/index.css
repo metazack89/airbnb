@@ -1,0 +1,132 @@
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #333; /* Gris oscuro suave */
+  background: linear-gradient(
+    135deg,
+    #f5f7fa,
+    #c3cfe2
+  ); /* Fondo azul grisáceo claro */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #497ad6; /* Azul amigable */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #365fcf;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: inherit;
+  animation: fadeInBody 1s ease-in-out;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #2c3e50;
+  animation: fadeInTitle 1.2s ease forwards;
+}
+
+button {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #497ad6;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(73, 122, 214, 0.4);
+}
+
+button:hover {
+  background-color: #365fcf;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 14px rgba(54, 95, 207, 0.5);
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+  border: 2px solid #365fcf;
+}
+
+/* ESTILOS ESPECIALES PARA ICONOS */
+.icon {
+  color: #497ad6; /* Azul visible y amigable */
+  font-size: 1.8rem;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #365fcf;
+  transform: scale(1.2); /* Pequeño zoom al pasar */
+}
+
+/* Estilos para filtros o modales también */
+.filtersContainer,
+.modalContainer {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+}
+
+/* Animaciones extra */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #333;
+    background: linear-gradient(135deg, #ffffff, #e3ebf6);
+  }
+  a:hover {
+    color: #365fcf;
+  }
+  button {
+    background-color: #497ad6;
+  }
+}

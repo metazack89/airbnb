@@ -1,0 +1,132 @@
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    list-style-type: none;
+    margin: 10px 0;
+    padding-top: 20px;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.itemContainer:hover {
+    cursor: pointer;
+}
+
+.itemImg {
+    border-radius: 15px;
+    width: 100%;
+    height: 275px;
+    object-fit: cover; 
+}
+
+.propertyName {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.propertyLocation {
+    font-size: 0.8rem;
+}
+
+.propertyPrice {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.filtersContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.leftSideFiltersContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtersIcon {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border: 1px solid grey;
+    border-radius: 12px;
+    background-color: white;
+    font-weight: lighter;
+    height: 2.5rem;
+    font-size: 0.9rem;
+}
+
+.bars {
+    padding-right: 10px;
+    font-size: 1.1rem; 
+}
+
+.filtersIcon:hover {
+    cursor: pointer;
+    color: #497ad6;
+}
+
+.filtersIcon:active {
+    color: red;
+}
+
+.propertyTypesContainer {
+    display: flex;
+    gap: 20px;
+}
+
+@media only screen and (min-width: 481px) {
+    .listContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px; 
+        padding: 30px;
+    } 
+    .itemImg {
+        height: 200px;
+    }
+    .filtersContainer {
+        padding: 20px 30px
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .listContainer {
+        grid-template-columns: repeat(3, 1fr);;
+        gap: 40px 25px; 
+        padding: 30px 40px;
+    }
+    .itemImg {
+        height: 250px;
+    }
+    .filtersContainer {
+        padding: 30px 40px;
+        justify-content: space-between; 
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .listContainer {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 30px 80px;
+    }
+    .filtersContainer {
+        padding: 30px 80px;
+    }
+}
+
+@media only screen and (min-width: 1640px) {
+    .listContainer {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

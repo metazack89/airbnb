@@ -1,0 +1,154 @@
+.propertySection {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.propertyInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgb(227, 227, 227);
+}
+
+.topContainerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.singlePropertyName {
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.singlePropertyDescription {
+    font-size: 1rem;
+}    
+
+.singlePropertyLocation {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.reviewsLink {
+    font-size: 0.8rem;
+    color: black;
+}
+
+.reviewsLink:active, .reviewsLink:hover {
+    color: #497ad6;
+    font-weight: bold;
+}
+
+.reviewsLink:active {
+    color: red;
+}
+
+.host_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin: 0 20px;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(227, 227, 227);
+}
+
+.avatar_container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hostAvatar {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hostFullName {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.propertyReservationContainer {
+    gap: 5rem;
+    margin: 0 20px;
+    padding: 20px 0;
+}
+
+.reserveBtn {
+    display: inline-block;
+    text-align: center;
+    width: 175px;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #7b9bd6;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reserveBtn:hover {
+    background-color: white;
+    color: #497ad6;
+    border: 2px solid #497ad6;
+}
+
+.reserveBtn:active {
+    color: red;
+}
+
+@media only screen and (min-width: 481px) {
+    .propertyInfoContainer {
+        margin: 0 30px;
+        padding: 20px 0;
+    }
+    .host_info {
+        margin: 0 30px;
+        padding: 20px 0;
+    }
+    .propertyReservationContainer {
+        margin: 0 30px;
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .propertyInfoContainer {
+        margin: 0 40px;
+        padding: 30px 0;
+    }
+    .host_info {
+        margin: 0 40px;
+        padding: 30px 0;
+    }
+    .propertyReservationContainer {
+        margin: 0 40px;
+        padding: 30px 0;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .propertyInfoContainer {
+        margin: 0 310px;
+        padding: 30px 0;
+    }
+    .host_info {
+        margin: 0 310px;
+        padding: 30px 0;
+    }
+    .propertyReservationContainer {
+        margin: 0 310px;
+        padding: 30px 0;
+    }
+}

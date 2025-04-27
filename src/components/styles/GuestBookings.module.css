@@ -1,0 +1,237 @@
+.guestBookingsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.guestBookingsHeading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 30px 0;
+    padding: 10px 0;
+}
+
+.bookingCard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 8px;
+}
+
+.mainInfo {
+    font-weight: 500;
+}
+
+.datesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dateContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mainInfoCategory {
+    font-size: 0.9rem;
+}
+
+.itemImg {
+    border-radius: 15px;
+    width: 200px;
+    height: auto;
+    object-fit: cover; 
+}
+
+.bookingBtnsContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.editBookingModal {
+    display: flex; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.editBookingSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 350px;
+    height: auto;
+}
+
+.modalTop {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editBookingHeading {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.closeModalIcon {
+    font-size: 2rem;
+}
+
+.closeModalIcon:hover {
+    cursor: pointer;
+    color:  #497ad6;
+}
+
+.closeModalIcon:active {
+    color: red;
+}
+
+.editBookingForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.editBookingFormLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.editBookingFormInput {
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid black;;
+    border-radius: 8px;
+    padding: 5px;
+    font-family: Montserrat, serif;
+}
+
+.editBookingBtn, .deleteBookingBtn, .saveChangesBtn {
+    padding: 0.8rem 1.2rem;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #497ad6;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.saveChangesBtn {
+    margin-top: 20px;
+}
+
+.editBookingBtn:hover, .deleteBookingBtn:hover, .saveChangesBtn:hover {
+    color:  #497ad6;
+    cursor: pointer;
+}
+
+.editBookingBtn:active, .deleteBookingBtn:active, .saveChangesBtn:active {
+    color:  red;
+}
+
+.successMessage {
+    font-size: 0.9rem;
+    color: red;
+}
+
+@media only screen and (min-width: 481px) {
+    .guestBookingsSection {
+        padding: 20px 30px;
+    }
+    .bookingsContainer {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .bookingCard {
+        width: 370px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "message message"
+            "datesContainer itemImg"
+            "datesContainer itemImg"
+            "hostInfo hostInfo"
+            "bookingBtnsContainer bookingBtnsContainer";
+        justify-items: center;
+        gap: 5px;
+    }
+    .message {
+        grid-area: message;
+        padding: 5px;
+        place-self: center;
+    }
+    .datesContainer {
+        grid-area: datesContainer;
+        justify-content: center;
+    }
+    .itemImg {
+        grid-area: itemImg;
+        padding: 7px;
+        height: 150px;
+    }
+    .hostInfo {
+        grid-area: hostInfo;
+    }
+    .bookingBtnsContainer {
+        grid-area: bookingBtnsContainer;
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .guestBookingsSection {
+        padding: 10px 40px 70px;
+    }
+    .guestBookingsHeading {
+        align-self: center;
+    }
+    .guestBookings {
+        padding: 20px 40px;
+    }
+    .bookingsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-self: center;
+    }
+    .bookingCard {
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .guestBookingsSection {
+        padding: 10px 80px 70px;
+    }
+    .bookingCard {
+        width: 500px;
+    }
+}

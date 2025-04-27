@@ -1,0 +1,19 @@
+.gitHubIcon {
+  cursor: pointer;
+  border: none;
+  font-size: 2.5rem; /* Un poco más grande para que destaque */
+  color: #222; /* Un negro más suave */
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease; /* Animaciones suaves */
+}
+
+.gitHubIcon:hover {
+  color: #497ad6; /* Azul bonito al pasar el mouse */
+  transform: scale(1.2) rotate(5deg); /* Efecto de zoom + giro pequeño */
+}
+
+.gitHubIcon:active {
+  color: #ff4c4c; /* Rojo vibrante al presionar */
+  transform: scale(0.95); /* Pequeña compresión al hacer clic */
+}
